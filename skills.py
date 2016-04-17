@@ -31,25 +31,22 @@ def without_duplicates(words):
         >>> sorted(without_duplicates([111111, 2, 33333, 2]))
         [2, 33333, 111111]
     """
-# start with an empty dictionary to take in the words
-    wordsdict {}
-#for loop to take in a list of words 
-# make a dictionary of the words with values as number of times the word is seen
-    for word in words: #loop over, iterate over list
-        if word is not in words #check for word in words
-            #if the word doesn't already exist in the dictionary get it and add it with a value of 1
-            words[word] = 1
-        #if the word is in the dictionary, ignore it (removing dupes)
-        else 
-            ignore the word
-#where does this go?
-if list is empty, return empty list
+    my_dict = {}
 
-# return a sorted list
-#how do you return the keys of a dictionary in a list?
-.keys[] ??
-    return []
+    if len(words) == 0:
+        return []
 
+    else: 
+        for item in words:
+            my_dict[item] = my_dict.get(item,1) + 0  
+        sorted_dict = sorted(my_dict)
+        
+        #print sorted_dict
+
+    return sorted_dict
+
+    without_duplicates(words)  
+  
 
 def find_unique_common_items(items1, items2):
     """Produce the set of *unique* common items in two lists.
@@ -78,13 +75,13 @@ def find_unique_common_items(items1, items2):
         [2]
     """
 
-    produce the set of **unique common items in 2 lists...
-    Without using if __ in __ or list.index methods
-    so look through two lists and find the items that have a match in each list
-    THEN?
-    sort lists for matching items in both but only show them once
-    THEN
-    ALSO make sure the items match type as well
+    # produce the set of **unique common items in 2 lists...
+    # Without using if __ in __ or list.index methods
+    # so look through two lists and find the items that have a match in each list
+    # THEN?
+    # sort lists for matching items in both but only show them once
+    # THEN
+    # ALSO make sure the items match type as well
 
     return []
 
@@ -114,13 +111,13 @@ def count_words(phrase):
         {'Porcupine': 1, 'do.': 1, 'porcupine': 1, 'see,': 1}
     """
 
-    Count unique words in a string
-    take a single string and return a dictionary
-    wit all the words as keys
-    amd the number of time that word appears in the string as the values
-    *words that appear more than once should be counted each time
-    punctuation can be included as part of the word 
-    capital words are unique
+    # Count unique words in a string
+    # take a single string and return a dictionary
+    # wit all the words as keys
+    # amd the number of time that word appears in the string as the values
+    # *words that appear more than once should be counted each time
+    # punctuation can be included as part of the word 
+    # capital words are unique
 
     return {}
 
@@ -163,12 +160,12 @@ def translate_to_pirate_talk(phrase):
         >>> translate_to_pirate_talk("my student is not a man!")
         'me swabbie be not a man!'
     """
-take in text
-loop through text
-put that test in a dictionary
-assign the keys as the english 
-Go through the keys and reassign values as their pirate word
-when you translate to pirate, it should return th string provided in pirate
+# take in text
+# loop through text
+# put that test in a dictionary
+# assign the keys as the english 
+# Go through the keys and reassign values as their pirate word
+# when you translate to pirate, it should return th string provided in pirate
 
 
     return ""
@@ -188,13 +185,13 @@ def sort_by_word_length(words):
         [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
     """
 
-    given a list of words
-    return a list of tuples
-    (1, ['a']) word length is one, word is 'a'
-    ordered by word length
-    put all one letter words in the key 1 list
-    and the list of words of that word length
-    return the tuples soreted by word length
+    # given a list of words
+    # return a list of tuples
+    # (1, ['a']) word length is one, word is 'a'
+    # ordered by word length
+    # put all one letter words in the key 1 list
+    # and the list of words of that word length
+    # return the tuples soreted by word length
 
     return []
 
