@@ -40,8 +40,6 @@ def without_duplicates(words):
         for item in words:
             my_dict[item] = my_dict.get(item,1) + 0  
         sorted_dict = sorted(my_dict)
-        
-        #print sorted_dict
 
     return sorted_dict
 
@@ -74,14 +72,13 @@ def find_unique_common_items(items1, items2):
         >>> sorted(find_unique_common_items(["2", "1", 2], [2, 1]))
         [2]
     """
-
-    # produce the set of **unique common items in 2 lists...
-    # Without using if __ in __ or list.index methods
-    # so look through two lists and find the items that have a match in each list
-    # THEN?
-    # sort lists for matching items in both but only show them once
-    # THEN
-    # ALSO make sure the items match type as well
+    items1dict = {}
+    
+    for item in items1 and items2:
+        items1dict[item] = items1dict.get(item,1) + 0 
+    
+    print items1dict.keys()
+#still working on this but the first part works
 
     return []
 
@@ -110,16 +107,15 @@ def count_words(phrase):
         >>> print_dict(count_words("Porcupine see, porcupine do."))
         {'Porcupine': 1, 'do.': 1, 'porcupine': 1, 'see,': 1}
     """
+    my_dict = {}
 
-    # Count unique words in a string
-    # take a single string and return a dictionary
-    # wit all the words as keys
-    # amd the number of time that word appears in the string as the values
-    # *words that appear more than once should be counted each time
-    # punctuation can be included as part of the word 
-    # capital words are unique
+    items = phrase.split(' ')
 
-    return {}
+    for item in items:
+        my_dict[item] = my_dict.get(item,0) + 1
+
+    return my_dict
+    count_words(phrase)
 
 
 def translate_to_pirate_talk(phrase):
@@ -167,6 +163,31 @@ def translate_to_pirate_talk(phrase):
 # Go through the keys and reassign values as their pirate word
 # when you translate to pirate, it should return th string provided in pirate
 
+# eng_to_pirate = {
+
+#     'sir':'matey',
+#     'hotel':'fleabag inn',
+#     'student':'swabbie',
+#     'boy':'man',
+#     'professor':'foul blaggart',
+#     'restaurant':'galley',
+#     'your':'yer',
+#     'excuse':'arr',
+#     'students':'swabbies',
+#     'are':'be',
+#     'restroom':'head',
+#     'my':'me',
+#     'is':'be',
+# }
+
+
+# words = "my student is not a man!"
+# for word in words:
+#     words = line.split()
+#     if word in eng_to_pirate:
+#         print .values
+#     else:
+#         print word
 
     return ""
 
@@ -184,7 +205,15 @@ def sort_by_word_length(words):
         >>> sort_by_word_length(["ok", "an", "apple", "a", "day"])
         [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
     """
+    # word_dict = {}
 
+    # for word in words:
+    #         count characters in word
+    #         create key with that integer
+    #         add words with that word count to list of values
+    #     sort by keys
+            
+            #word_dict[word] = my_dict.get(item,1) + 0  
     # given a list of words
     # return a list of tuples
     # (1, ['a']) word length is one, word is 'a'
